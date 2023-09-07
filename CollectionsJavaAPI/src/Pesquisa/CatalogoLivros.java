@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CatalogoLivros {
-    private final List<Livro> livroList;
+    private List<Livro> livroList;
 
     public CatalogoLivros() {
         this.livroList = new ArrayList<>();
@@ -50,5 +50,18 @@ public class CatalogoLivros {
             }
         }
         return livroPorTitulo;
+    }
+
+    public static void main(String[] args) {
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 1", 2023);
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 2", 2023);
+        catalogoLivros.adicionarLivro("Livro 2", "Autor 2", 2020);
+        catalogoLivros.adicionarLivro("Livro 3", "Autor 3", 2019);
+        catalogoLivros.adicionarLivro("Livro 4", "Autor 4", 2022);
+
+        System.out.println(catalogoLivros.pesquisarPorAutor("Autor 2") + "\n");
+        System.out.println(catalogoLivros.pesquisaPorIntervaloAno(2019, 2022) + "\n");
+        System.out.println(catalogoLivros.pesquisarPorTitulo("Livro 1") + "\n");
     }
 }
