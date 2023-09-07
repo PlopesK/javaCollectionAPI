@@ -13,8 +13,8 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "Tarefa{" +
-                "descricao='" + descricao + '\'' +
+        return "Tarefa {" +
+                "descricao= '" + descricao + '\'' +
                 '}';
     }
 }
