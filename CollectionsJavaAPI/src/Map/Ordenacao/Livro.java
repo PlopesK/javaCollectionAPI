@@ -36,10 +36,3 @@ public class Livro implements Comparable<Livro> {
         return "\n'" + titulo + '\'' + ", autor= '" + autor + '\'' + ", preço= " + preco + "\n";
     }
 }
-
-class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>> {
-    @Override
-    public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
-        return l1.getValue().getAutor().compareToIgnoreCase(l2.getValue().getAutor());
-    }
-}
